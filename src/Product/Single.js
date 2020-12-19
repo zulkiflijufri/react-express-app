@@ -1,9 +1,40 @@
+import Axios from "axios";
 import React from "react";
+import { useParams, useHistory } from "react-router-dom";
 
 export default function Single() {
+    const { id } = useParams();
+    const history = useHistory();
+    const [product, setProduct] = React.useState({
+        name: "",
+        price: 0,
+        status: true,
+    });
+
+    React.useEffect(() => {
+        Axios.get(`http://localhost:3000/product/${id}`)
+            .then((res) => {
+                const { status, message, data } = res.data;
+                if (status === "success") {
+                    setProduct(data);
+                } else {
+                    alert(message);
+                }
+            })
+            .catch((err) => console.log(err));
+    }, [id]);
+
     return (
         <div>
             <h2>Single product page</h2>
+            {product && (
+                <div>
+                    <div>Name: {product.name}</div>
+                    <div>Price: {product.price}</div>
+                    <div>Stock: {product.stock}</div>
+                </div>
+            )}
+            <button onClick={() => history.push("/product")}>Back</button>
         </div>
     );
 }

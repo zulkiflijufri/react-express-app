@@ -34,7 +34,13 @@ export default function List() {
                         products.map((product, i) => {
                             return (
                                 <tr key={i}>
-                                    <td className="center">{product.name}</td>
+                                    <td className="center">
+                                        <a
+                                            href={`/product/single/${product._id}`}
+                                        >
+                                            {product.name}
+                                        </a>
+                                    </td>
                                     <td className="center">{product.price}</td>
                                     <td className="center">{product.stock}</td>
                                 </tr>

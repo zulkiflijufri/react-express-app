@@ -8,6 +8,7 @@ export default function Single() {
     const [product, setProduct] = React.useState({
         name: "",
         price: 0,
+        stock: 1,
         status: true,
     });
 
@@ -32,6 +33,7 @@ export default function Single() {
                     <div>Name: {product.name}</div>
                     <div>Price: {product.price}</div>
                     <div>Stock: {product.stock}</div>
+                    <div>Status: {product ? "on" : "off"}</div>
                 </div>
             )}
             <button onClick={() => history.push("/product")}>Back</button>

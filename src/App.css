@@ -59,3 +59,34 @@
     color: #666;
     border-bottom: 2px solid #fff;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: #eee;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+form > label {
+    display: block;
+    margin-top: 10px;
+    font-size: 90%;
+}
+
+form > input,
+form > select {
+    padding: 5px;
+}

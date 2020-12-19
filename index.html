@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pengenalan ReactJs</title>
+    </head>
+    <body>
+        <script
+            src="https://unpkg.com/react@16/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@16/umd/react-
+dom.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/babel-standalone@6/babel.min.js"
+            crossorigin
+        ></script>
+
+        <div id="root"></div>
+
+        <script type="text/babel">
+            // const time = () => {
+            //     const element = (
+            //         <div>
+            //             <h1>Hello World!</h1>
+            //             <p>Sekarang jam {new Date().toLocaleTimeString()}</p>
+            //         </div>
+            //     );
+            //     ReactDOM.render(element, document.getElementById("root"));
+            // };
+
+            // setInterval(time, 1000);
+
+            // Class component / statefull
+            // class Hello extends React.Component {
+            //     render() {
+            //         return <h3>Zulkifli as Web Developer</h3>;
+            //     }
+            // }
+
+            // Function component / stateless
+            function Hello() {
+                return <h1>ReactJS Developer</h1>
+            }
+
+            const el = <Hello />;
+            ReactDOM.render(el, document.getElementById("root"));
+        </script>
+    </body>
+</html>
